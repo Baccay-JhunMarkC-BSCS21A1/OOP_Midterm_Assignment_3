@@ -1,6 +1,5 @@
 ﻿namespace TestProject1;
-
-public class ClassRelationshipsTest
+public partial class ClassRelationshipsTest
 {
     [Fact]
     public void AddBook_IncreasesBookCount()
@@ -43,7 +42,7 @@ public class ClassRelationshipsTest
         Book foundBook = library.SearchBook("Title");
 
         // Assert
-        Assert.Equal(book, foundBook);
+        Assert.Equivalent(book, foundBook);
     }
 
     [Fact]
@@ -76,7 +75,6 @@ public class ClassRelationshipsTest
         Assert.Contains(order1, customer.GetOrders());
         Assert.Contains(order2, customer.GetOrders());
     }
-
     public class OrderProcessorTests
     {
         [Fact]

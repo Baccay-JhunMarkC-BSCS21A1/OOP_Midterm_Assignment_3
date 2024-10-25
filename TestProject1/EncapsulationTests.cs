@@ -61,6 +61,6 @@ public class EncapsulationTests
         account.Withdraw(amount, isOtherBank);
 
         // Assert
-        Assert.Equal(1000 - amount - penalty, account.GetBalance());
+        Assert.Equal(initialBalance - amount - penalty, account.GetBalance());
     }
 }
